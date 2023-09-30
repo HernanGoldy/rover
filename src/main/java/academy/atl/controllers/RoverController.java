@@ -2,6 +2,7 @@ package academy.atl.controllers;
 
 import academy.atl.dto.*;
 //import academy.atl.dto.RoverDto;
+import academy.atl.models.Orientacion;
 import academy.atl.models.Rover;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,11 @@ public class RoverController {
     // Para obtener la ubicación del Rover
     @GetMapping("api/rover/")
     public Rover obtener() {
-        return null;
+        Rover rover = new Rover();
+        rover.setX(2);
+        rover.setY(2);
+        rover.setOrientacion(Orientacion.NORTE);
+        return rover;
     }
 
     // Para enviar una lista de comandos para que los ejecute el Rover

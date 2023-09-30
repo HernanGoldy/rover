@@ -1,7 +1,9 @@
 package academy.atl.controllers;
 
-import academy.atl.dto.ComandosDto;
-import academy.atl.dto.RoverDto;
+import academy.atl.dto.*;
+//import academy.atl.dto.RoverDto;
+import academy.atl.models.Rover;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,13 +13,19 @@ public class RoverController {
 
     // Para crear el Rover
     @PostMapping("api/rover/")
-    public void create(@RequestBody RoverDto rover) {
+    public void crear(@RequestBody RoverDto rover) {
         System.out.println(rover);
     }
 
-    // Para crear una lista de comandos para que los ejecute el Rover
-    @PostMapping("api/rover/comandos")
-    public void create(@RequestBody ComandosDto comandos) {
+    // Para obtener la ubicación del Rover
+    @GetMapping("api/rover/")
+    public Rover obtener() {
+        return null;
+    }
+
+    // Para enviar una lista de comandos para que los ejecute el Rover
+    @PostMapping("api/rover/comandos/")
+    public void enviarComandos(@RequestBody ComandosDto comandos) {
         System.out.println(comandos);
     }
 }

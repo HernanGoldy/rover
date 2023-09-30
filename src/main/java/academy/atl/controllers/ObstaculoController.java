@@ -10,7 +10,7 @@ public class ObstaculoController {
 
     // Para crear un obstáculo
     @PostMapping("api/obstaculo/")
-    public void create(@RequestBody ObstaculoDto obstaculo) {
+    public void crear(@RequestBody ObstaculoDto obstaculo) {
         System.out.println(obstaculo);
     }
 }

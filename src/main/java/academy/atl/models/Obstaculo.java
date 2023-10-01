@@ -13,9 +13,9 @@ public class Obstaculo {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "posY")
+    @Column(name = "posy")
     private Integer y;
 
-    @Column(name = "posX")
+    @Column(name = "posx")
     private Integer x;
 }

@@ -13,11 +13,11 @@ public class Rover {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "posX")
-    private Integer x;
-
     @Column(name = "posY")
     private Integer y;
+
+    @Column(name = "posX")
+    private Integer x;
 
     @Column(name = "orientacion")
     private Orientacion orientacion;

@@ -1,8 +1,6 @@
 package academy.atl.controllers;
 
 import academy.atl.dto.*;
-//import academy.atl.dto.RoverDto;
-import academy.atl.models.Orientacion;
 import academy.atl.models.Rover;
 import academy.atl.services.RoverService;
 import org.springframework.beans.factory.annotation.Autowired;

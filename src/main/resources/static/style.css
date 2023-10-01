@@ -1,0 +1,11 @@
+#rover {
+    position: absolute;
+    width: 100px;
+    transition: all 500ms linear;
+}
+
+.roca {
+    position: absolute;
+    width: 100px;
+    margin-top: 22px;
+}

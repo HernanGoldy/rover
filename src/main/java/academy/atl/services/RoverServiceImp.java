@@ -41,7 +41,7 @@ public class RoverServiceImp implements RoverService{
 
     /**
      * @param rotacionDerecha Aquí la rotación del Rover va a ser en sentido de las agujas del reloj. Por ej: Si en
-     *                        la «orintación inicial» el Rover está mirando al NORTE, al «rotar», su
+     *                        la «orientación inicial» el Rover está mirando al NORTE, al «rotar», su
      *                        «orientación final» será mirando al ESTE y así rotará sucesivamente.
      */
     private void rotarRover(Rover rover, boolean rotacionDerecha) {

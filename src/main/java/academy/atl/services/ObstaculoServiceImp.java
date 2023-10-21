@@ -13,9 +13,9 @@ public class ObstaculoServiceImp implements ObstaculoService {
     // Para acceder a todas las funciones del repositorio
     @Autowired
     private ObstaculoRepository repository;
+
     @Override
     public List<Obstaculo> mostrarObstaculos() {
-
         return repository.findAll();
     }
 }

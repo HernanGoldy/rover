@@ -31,5 +31,10 @@ public class RoverController {
     @PostMapping("api/rover/comandos/")
     public void enviarComandos(@RequestBody ComandosDto comandos) {
         System.out.println(comandos);
+
+         for (String comando : comandos.getComandos()) {
+             service.enviarComando(comando);
+             System.out.println(comandos);
+         }
     }
 }

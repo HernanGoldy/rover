@@ -20,10 +20,10 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
         * Integer y;
         * Orientacion orientacion;
     * Orientacion (enum)
-        * NORTH,
-        * EAST,
-        * SOUTH,
-        * WEST;
+        * NORTE,
+        * ESTE,
+        * SUR,
+        * OESTE;
     * Obstaculo (@Data)
         * Long id;
         * Integer x;

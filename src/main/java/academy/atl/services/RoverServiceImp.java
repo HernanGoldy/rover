@@ -39,6 +39,11 @@ public class RoverServiceImp implements RoverService{
         repository.save(rover);
     }
 
+    /**
+     * @param rotacionDerecha Aquí la rotación del Rover va a ser en sentido de las agujas del reloj. Por ej: Si en
+     *                        la «orintación inicial» el Rover está mirando al NORTE, al «rotar», su
+     *                        «orientación final» será mirando al ESTE y así rotará sucesivamente.
+     */
     private void rotarRover(Rover rover, boolean rotacionDerecha) {
         Orientacion orientacion = rover.getOrientacion();
         Orientacion orientacionFinal = null;

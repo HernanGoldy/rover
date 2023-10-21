@@ -39,11 +39,11 @@ public class RoverServiceImp implements RoverService{
         repository.save(rover);
     }
 
-    private void rotarRover(Rover rover, boolean rotacion) {
+    private void rotarRover(Rover rover, boolean rotacionDerecha) {
         Orientacion orientacion = rover.getOrientacion();
         Orientacion orientacionFinal = null;
 
-        if (rotacion) {
+        if (rotacionDerecha) {
             switch (orientacion) {
                 case NORTE: orientacionFinal = Orientacion.ESTE; break;
                 case ESTE: orientacionFinal = Orientacion.SUR; break;

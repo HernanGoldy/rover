@@ -33,8 +33,8 @@ public class RoverServiceImp implements RoverService{
         switch (comando) {
             case "F": moverRover(rover, true); break;
             case "B": moverRover(rover, false); break;
-            case "L": rotarRover(rover, true); break;
-            case "R": rotarRover(rover, false); break;
+            case "R": rotarRover(rover, true); break;
+            case "L": rotarRover(rover, false); break;
         }
         repository.save(rover);
     }

@@ -17,6 +17,7 @@ public class RoverServiceImp implements RoverService{
     @Autowired
     private RoverRepository repository;
 
+    @Autowired
     private ObstaculoRepository obstaculoRepository;
 
     @Override

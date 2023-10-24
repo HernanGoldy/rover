@@ -23,10 +23,9 @@ public class RoverServiceImpTest {
     @Autowired
     private RoverServiceImp service;
 
-
     @Test
     @DisplayName("Al enviar comando, se llama al servicio")
-    public void whenSendCommand_callService() {
+    public void alEnviarComando_llamarAlServicio() {
         Rover rover = new Rover();
         rover.setX(5);
         rover.setY(5);

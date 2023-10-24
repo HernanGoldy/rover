@@ -54,21 +54,22 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
 | @Enumerated(EnumType.STRING)                        |                                                     |
 | @Column(name = "orientation")                       |                                                     |
 6. Se conecta con la base de datos
-    * **NOTA:** _JpaRepository_ nos va a hacer automáticamente las altas, las bajas, las modificiones y las
+   >**NOTA:** _JpaRepository_ nos va a hacer automáticamente las altas, las bajas, las modificiones y las
       búsquedas, entre tantas otras funcionalidades.
+
     * interface RoverRepository extends JpaRepository<>
     * interface ObstaculoRepository extends JpaRepository<>
 7. Se crean los servicios para conectar la base de datos
-    * interface RoverService
-        * Rover obtener()
-    * RoverServiceImp implements RoverService
-        * @Service
-            * @Override
-    * interface ObstaculoService
-        * List<Obstaculo> mostrarObstaculos
-    * ObstaculoServiceImp implements ObstaculoService
-        * @Service
-            * @Override
+
+| **interface RoverService** | **RoverServiceImp implements RoverService** |
+|----------------------------|---------------------------------------------|
+| Rover obtener()            | @Service                                    |
+|                            | @Override                                   |
+
+| **interface ObstaculoService**    | **ObstaculoServiceImp implements ObstaculoService** |
+|-----------------------------------|-----------------------------------------------------|
+| List<Obstaculo> mostrarObstaculos | @Service                                            |
+|                                   | @Override                                           |
 8. Desde el controller, llamamos al servicio
     * RoverController
         * @Autowired

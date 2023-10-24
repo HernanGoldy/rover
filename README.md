@@ -12,33 +12,21 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
     * dto
     * repository
 2. Se crea los modelos y se le asigna sus propiedades
-    * Rover (@Data)
-        * Long id;
-        * Integer x;
-        * Integer y;
-        * Orientacion orientacion;
-    * Orientacion (enum)
-        * NORTE,
-        * ESTE,
-        * SUR,
-        * OESTE;
-    * Obstaculo (@Data)
-        * Long id;
-        * Integer x;
-        * Integer y;
-    * MapaDeMarte
-        * Rover rover;
-        * List<Obstaculo> obstaculos;
+
+| Rover (@Data)            |Orientacion (enum)|Obstaculo (@Data)| MapaDeMarte                 |
+|--------------------------|------------------|-----------------|-----------------------------|
+| Long id;                 |NORTE,            |Long id;         | Rover rover;                |
+| Integer x;               |ESTE,             |Integer x;       | List<Obstaculo> obstaculos; |
+| Integer y;               |SUR,              |Integer y;       |                             |
+| Orientacion orientacion; |OESTE;            |                 |                             |
+
 3. Se crean los DTo (para endpoints robustos)
-    * RoverDto
-        * Integer x;
-        * Integer y;
-        * Orientacion orientacion;
-    * ObstaculoDto
-        * Integer x;
-        * Integer y;
-    * ComandosDto
-        * List<String> comandos;
+
+| RoverDto                 | ObstaculoDto | ComandosDto            |
+|--------------------------|--------------|------------------------|
+| Integer x;               | Integer x;   | List<String> comandos; |
+| Integer y;               | Integer y;   | Integer x;             |
+| Orientacion orientacion; |              | Integer y;             |
 4. Se crean los endpoints (controllers)
     * RoverController (@RestController)
         * @PostMapping("api/rover/")

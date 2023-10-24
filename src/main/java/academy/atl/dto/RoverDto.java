@@ -14,4 +14,7 @@ public class RoverDto {
     private Integer x;
     private Integer y;
     private Orientacion orientacion;
+
+    public RoverDto() {
+    }
 }

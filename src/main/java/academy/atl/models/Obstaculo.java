@@ -1,5 +1,6 @@
 package academy.atl.models;
 
+import academy.atl.dto.ObstaculoDto;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,4 +19,13 @@ public class Obstaculo {
 
     @Column(name = "posx")
     private Integer x;
+
+
+    // constructors
+    public Obstaculo() { }
+
+    public Obstaculo(ObstaculoDto obstaculo) {
+        this.x = obstaculo.getX();
+        this.y = obstaculo.getY();
+    }
 }

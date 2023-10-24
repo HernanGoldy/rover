@@ -4,6 +4,7 @@ import academy.atl.dto.*;
 import academy.atl.models.Rover;
 import academy.atl.services.RoverService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,12 +30,14 @@ public class RoverController {
 
     // Para enviar una lista de comandos para que los ejecute el Rover
     @PostMapping("api/rover/comandos/")
-    public void enviarComandos(@RequestBody ComandosDto comandos) {
+    public ResponseEntity<?> enviarComandos(@RequestBody ComandosDto comandos) {
+
         System.out.println(comandos);
 
          for (String comando : comandos.getComandos()) {
              service.enviarComando(comando);
              System.out.println(comandos);
          }
+         return ResponseEntity.ok(service.obtener());
     }
 }

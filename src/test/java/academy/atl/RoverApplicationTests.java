@@ -9,5 +9,4 @@ class RoverApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

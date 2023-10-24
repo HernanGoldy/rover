@@ -30,11 +30,11 @@ public class RoverServiceImp implements RoverService{
     public void enviarComando(String comando) {
         Rover rover = obtener();
 
-        switch (comando) {
-            case "F": moverRover(rover, true); break;
-            case "B": moverRover(rover, false); break;
-            case "R": rotarRover(rover, true); break;
-            case "L": rotarRover(rover, false); break;
+        switch (comando.toUpperCase()) {
+            case "F" -> moverRover(rover, true);
+            case "B" -> moverRover(rover, false);
+            case "R" -> rotarRover(rover, true);
+            case "L" -> rotarRover(rover, false);
         }
         repository.save(rover);
     }
@@ -88,7 +88,7 @@ public class RoverServiceImp implements RoverService{
     }
 
     private boolean puedeMoverseAEstaPosicion(int posXFinal, int posYFinal) {
-        List<Obstaculo> obstaculos =obstaculoRepository.findAll();
+        List<Obstaculo> obstaculos = (List<Obstaculo>) obstaculoRepository.findAll();
 
         for (Obstaculo obstaculo : obstaculos) {
             if (obstaculo.getX() == posXFinal

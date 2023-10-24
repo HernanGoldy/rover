@@ -1,12 +1,13 @@
 package academy.atl.repository;
 
 import academy.atl.models.Obstaculo;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
- * @apiNote JpaRepository nos va a generar automáticamente las Altas,
+ * @apiNote CrudRepository nos va a generar automáticamente las Altas,
  * Bajas, Modificaciones y Búsquedas, para poder utilizarlo en el servicio.
  */
-
-public interface ObstaculoRepository extends JpaRepository<Obstaculo, Long> {
+@Repository
+public interface ObstaculoRepository extends CrudRepository<Obstaculo, Long> {
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ObstaculoServiceImp implements ObstaculoService {
@@ -16,6 +17,17 @@ public class ObstaculoServiceImp implements ObstaculoService {
 
     @Override
     public List<Obstaculo> mostrarObstaculos() {
-        return repository.findAll();
+        return (List<Obstaculo>) repository.findAll();
     }
+
+    @Override
+    public Optional<Obstaculo> crear(Obstaculo obstaculo) {
+         return Optional.of(repository.save(obstaculo));
+    }
+
+    @Override
+    public void actualizar(Obstaculo obstaculo) { }
+
+    @Override
+    public void borrar(Obstaculo obstaculo) { }
 }

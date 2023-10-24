@@ -22,4 +22,7 @@ public class Rover {
     @Enumerated(EnumType.STRING)
     @Column(name = "orientacion")
     private Orientacion orientacion;
+
+    public Rover() {
+    }
 }

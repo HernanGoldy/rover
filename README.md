@@ -71,12 +71,11 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
 | List<Obstaculo> mostrarObstaculos | @Service                                            |
 |                                   | @Override                                           |
 8. Desde el controller, llamamos al servicio
-    * RoverController
-        * @Autowired
-        * RoverService service
-    * ObstaculoController
-        * @Autowired
-        * ObstaculoService service
+
+| **RoverController**   | **ObstaculoController**   |
+|-----------------------|---------------------------|
+| @Autowired            | @Autowired                |
+| RoverService service  | ObstaculoService service  |
 
 #### ✔ 2da Etapa - Testing
 1. Se crea la _«estructura de carpetas»_ para los test.

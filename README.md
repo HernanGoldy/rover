@@ -102,7 +102,11 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
 #### ✔ 2da Etapa - Testing
 1. Crear la _«estructura de carpetas»_ para los test.
     * controllers
-2. Agregar (en el archivo _«pom.xml»_) las dependencias de _junit_ y _junit-jupiter_ para utilizar **Mockito**.
-3. Crear los test unitarios y configurar Moquito
-    * RoverControllerTest (@RunWith(MockitoJUnitRunner.class))
-        * alEnviarComando_llamarAlServicio (@Test)
+    * services
+2. Agregar (en el archivo _«pom.xml»_) las dependencias de _junit_.
+3. Crear los test unitarios
+    * RoverControllerTest (@SpringBootTest)
+        * alEnviarComando_llamarAlServicio (@Test)(@DisplayName)
+        * alEnviarComandos_FRF_llamarAlServicio (@Test)(@DisplayName)
+    * RoverServiceImpTest (@SpringBootTest)
+        * alEnviarComando_llamarAlServicio (@Test)(@DisplayName)

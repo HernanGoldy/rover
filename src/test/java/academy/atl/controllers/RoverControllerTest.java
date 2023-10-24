@@ -28,7 +28,8 @@ public class RoverControllerTest {
 
 
     @Test
-    public void whenSendCommand_callService() {
+    @DisplayName("Al enviar comando, se llama al servicio")
+    public void cuandoSeEnviaComando_llamarAlServicio() {
         ComandosDto commandDto = new ComandosDto();
         List<String> commandsList = new ArrayList<>();
         commandsList.add("F");
@@ -40,23 +41,22 @@ public class RoverControllerTest {
     }
 
     @Test
-    @DisplayName("Cuando envío comado")
-    public void whenSendCommand_FRF_callService() {
+    @DisplayName("Al enviar comandos FRF, se llama al servicio")
+    public void cuandoSeEnvianComandos_FRF_llamarAlServicio() {
         ComandosDto commandDto = new ComandosDto();
         List<String> commandsList = new ArrayList<>();
         commandsList.add("F");
         commandsList.add("R");
         commandsList.add("F");
-        commandsList.add("R");
         commandDto.setComandos(commandsList);
 
         controller.enviarComandos(commandDto);
 
         // comprobamos si se llama un método
-        verify(roverService, times(4)).enviarComando(any());
+        verify(roverService, times(3)).enviarComando(any());
 
         // verificamos el tamaño de la lista
-        assertEquals(4, commandsList.size());
+        assertEquals(3, commandsList.size());
 
         // verificamos si el valor enviado es el no esperado
         assertNotEquals("F", commandsList.get(1));

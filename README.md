@@ -41,7 +41,8 @@ Proyecto creado para el examen final del bootcamp de ATL Academy.
         * @GetMapping("api/obstacle/")
             * List<Obstaculo> mostrarObstaculos
 5. En los modelos, se crean las tablas para la base de datos
-    * **NOTA:** En el archivo _pom.xml_ se carga la dependencia de _spring-boot-starter-data-jpa_ y se configura la base de datos en el archivo _application.properties_.
+
+**NOTA:** En el archivo _pom.xml_ se carga la dependencia de _spring-boot-starter-data-jpa_ y se configura la base de datos en el archivo _application.properties_.
 
 | **Rover** (@Entity)(@Table(name = "rover"))         | **Obstaculo** (@Entity)(@Table(name = "obstaculo")) |
 |-----------------------------------------------------|-----------------------------------------------------|

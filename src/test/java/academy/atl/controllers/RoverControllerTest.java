@@ -29,7 +29,7 @@ public class RoverControllerTest {
 
     @Test
     @DisplayName("Al enviar comando, se llama al servicio")
-    public void cuandoSeEnviaComando_llamarAlServicio() {
+    public void alEnviarComando_llamarAlServicio() {
         ComandosDto commandDto = new ComandosDto();
         List<String> commandsList = new ArrayList<>();
         commandsList.add("F");
@@ -42,7 +42,7 @@ public class RoverControllerTest {
 
     @Test
     @DisplayName("Al enviar comandos FRF, se llama al servicio")
-    public void cuandoSeEnvianComandos_FRF_llamarAlServicio() {
+    public void alEnviarComandos_FRF_llamarAlServicio() {
         ComandosDto commandDto = new ComandosDto();
         List<String> commandsList = new ArrayList<>();
         commandsList.add("F");
